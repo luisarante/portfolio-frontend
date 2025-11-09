@@ -13,11 +13,11 @@ interface ProjectProps {
     title: string;
     description: string;
     coverImage: string; 
-    projectUrl: string; 
+    id: number;
     technologies: ProjectTechnology[]; 
 }
 
-export function Project({ title, description, coverImage, projectUrl, technologies }: ProjectProps) {
+export function Project({ title, description, coverImage, id, technologies }: ProjectProps) {
     return (
         <div className="rounded-lg overflow-hidden shadow-lg">
             <div className="relative h-48 w-full">
@@ -51,7 +51,7 @@ export function Project({ title, description, coverImage, projectUrl, technologi
                 </div>
                 
                 <Link 
-                    to={projectUrl}
+                    to={`/projetos/${id}`}
                 >
                     <FaArrowRight size={20} style={{ color: "#7C7C7C" }}/>
                 </Link>

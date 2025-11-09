@@ -67,16 +67,11 @@ export function ProjectGallery() {
                     title={project.title}
                     description={project.description}
                     
-                    // --- AQUI ESTÃO AS MUDANÇAS ---
+                    coverImage={project.images[0]?.url || ""}
                     
-                    // 1. Pega a PRIMEIRA imagem do array como capa
-                    coverImage={project.images[0]?.url || ""} // O '?' evita erro se o array estiver vazio
-                    
-                    // 2. Transforma o array "sujo" em um array "limpo" de tecnologias
                     technologies={project.technologies.map(t => t.technology)}
                     
-                    // 3. Passe o link do demo (ou repo)
-                    projectUrl={project.linkDemo} 
+                    id={project.id}
                 />
             ))}
         </section>

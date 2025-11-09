@@ -5,9 +5,7 @@ export function App() {
   return (
     <div>
 
-      <header>
         <Header />
-      </header>
 
       <main>
         <Outlet />
