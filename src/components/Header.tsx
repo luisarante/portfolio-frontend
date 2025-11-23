@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,24 +37,28 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-30 transition-all duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
           isScrolled
             ? "bg-primary/90 backdrop-blur-md shadow-md py-2"
             : "bg-transparent py-6"
         }`}
       >
-        <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
+        <div className="container mx-auto flex sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl justify-between items-center px-4">
           <div
             className={`
               bg-primary text-white rounded-full flex items-center justify-center
               overflow-hidden relative transition-all duration-700 ease-in-out
-              ${isScrolled ? "w-[60px] h-[60px]" : "w-[180px] h-[60px]"}
+              ${
+                // CORREÇÃO 1: Se estiver rolando OU o menu estiver aberto, encolhe para bolinha (60px)
+                // Assim o nome "Luis Arantes" não ocupa espaço em cima do menu
+                isScrolled || isMenuOpen ? "w-[60px] h-[60px]" : "w-[180px] h-[60px]"
+              }
             `}
           >
             <span
               className={`
                 absolute text-2xl font-medium transition-all duration-300 ease-in-out
-                ${isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-90"}
+                ${isScrolled || isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-90"}
               `}
             >
               L
@@ -65,7 +68,8 @@ export function Header() {
               className={`
                 absolute text-2xl font-medium transition-all duration-300
                 ${
-                  showFullName
+                  // CORREÇÃO 2: Só mostra o nome se o scroll estiver no topo E o menu estiver FECHADO (!isMenuOpen)
+                  showFullName && !isMenuOpen
                     ? "opacity-100 scale-100"
                     : "opacity-0 scale-90 -translate-x-[50px]"
                 }
@@ -76,7 +80,7 @@ export function Header() {
           </div>
 
           <button
-            className={`md:hidden z-20 ${isScrolled || isMenuOpen ? 'text-white' : 'text-primary'}`}
+            className={`md:hidden transition-colors ${isScrolled || isMenuOpen ? 'text-white' : 'text-primary'}`}
             onClick={toggleMenu}
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
@@ -106,19 +110,23 @@ export function Header() {
             </svg>
           </button>
 
-          <nav className="hidden md:flex space-x-4 text-white">
-            <Link to="/" className="hover:text-secondary transition-colors">
+          <nav className={`hidden md:flex space-x-8 ${isScrolled ? 'text-white' : 'text-primary'}`}>
+            <a href="#hero" className="hover:text-secondary transition-colors">
               Home
-            </Link>
-            <Link
-              to="/#projetos"
-              className="hover:text-secondary transition-colors"
-            >
+            </a>
+            <a href="#sobre" className="hover:text-secondary transition-colors">
+              Sobre mim
+            </a>
+            <a href="#habilidades" className="hover:text-secondary transition-colors">
+              Habilidades
+            </a>
+            <a href="#projetos" className="hover:text-secondary transition-colors">
               Projetos
-            </Link>
-            <Link to="/#sobre" className="hover:text-secondary transition-colors">
-              Sobre
-            </Link>
+            </a>
+            <a href="#contato" className="hover:text-secondary transition-colors">
+              Contato
+            </a>
+            
           </nav>
         </div>
       </header>
@@ -127,7 +135,7 @@ export function Header() {
         id="mobile-menu"
         className={`fixed top-0 left-0 w-full min-h-screen bg-surface
           flex flex-col items-center justify-center space-y-6
-          transition-all duration-300 ease-in-out z-10
+          transition-all duration-300 ease-in-out z-40
           md:hidden
           ${
             isMenuOpen
@@ -135,27 +143,21 @@ export function Header() {
               : "opacity-0 -translate-x-full pointer-events-none"
           }`}
       >
-        <Link
-          to="/"
-          className="text-2xl text-white hover:text-primary"
-          onClick={toggleMenu}
-        >
-          Home
-        </Link>
-        <Link
-          to="/#sobre"
-          className="text-2xl text-white hover:text-primary"
-          onClick={toggleMenu}
-        >
-          Sobre
-        </Link>
-        <Link
-          to="/#projetos"
-          className="text-2xl text-white hover:text-primary"
-          onClick={toggleMenu}
-        >
-          Projetos
-        </Link>
+        <a href="#hero" onClick={toggleMenu} className="text-white text-xl transition-colors">
+            Home
+        </a>
+        <a href="#sobre" onClick={toggleMenu} className="text-white text-xl transition-colors">
+            Sobre mim
+        </a>
+        <a href="#habilidades" onClick={toggleMenu} className="text-white text-xl transition-colors">
+            Habilidades
+        </a>
+        <a href="#projetos" onClick={toggleMenu} className="text-white text-xl transition-colors">
+            Projetos
+        </a>
+        <a href="#contato" onClick={toggleMenu} className="text-white text-xl transition-colors">
+            Contato
+        </a>
       </div>
     </>
   );

@@ -50,10 +50,10 @@ export function Skills() {
     });
 
     return(
-        <section className="py-8 px-4 bg-surface rounded-3xl flex flex-col items-center w-full">
+        <section className="py-8 px-4 bg-surface rounded-3xl flex flex-col items-center w-full md:max-w-4xl mx-auto" id="habilidades">
             <h2 className="text-white font-medium text-3xl mb-4">Habilidades Técnicas</h2>
             
-            <div className="w-full rounded-full mt-4 bg-white flex overflow-x-auto px-4 gap-2 whitespace-nowrap py-2 no-scrollbar">
+            <div className="w-full md:max-w-min rounded-full mt-4 bg-white flex overflow-x-auto px-4 gap-2 whitespace-nowrap py-2 no-scrollbar">
                 {filters.map((filter) => (
                     <Link 
                         key={filter.value} 

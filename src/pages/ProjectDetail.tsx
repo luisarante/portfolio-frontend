@@ -89,7 +89,6 @@ export function ProjectDetail() {
     if (loading) {
         return (
             <main className="text-white p-4 md:p-8 max-w-6xl mx-auto">
-    
                 <header className="flex gap-4 items-center mb-4">
                     <div className="w-14 h-14 p-4 rounded-full bg-gray-700 animate-pulse" />
                     <div className="h-12 w-3/4 bg-gray-700 rounded-lg animate-pulse" />

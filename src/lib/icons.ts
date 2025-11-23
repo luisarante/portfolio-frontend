@@ -24,7 +24,8 @@ import {
     SiVuedotjs,
     SiAngular,
     SiSvelte,
-    SiPhp
+    SiPhp,
+    SiFlutter
 } from 'react-icons/si';
 import { FaQuestionCircle } from 'react-icons/fa';
 
@@ -53,7 +54,8 @@ export const iconMap: { [key: string]: React.ElementType } = {
     "SiVuedotjs": SiVuedotjs,
     "SiAngular": SiAngular,
     "SiSvelte": SiSvelte,
-    "SiPhp": SiPhp
+    "SiPhp": SiPhp,
+    "SiFlutter": SiFlutter
 };
 
 export const DefaultIcon = FaQuestionCircle;

@@ -24,3 +24,47 @@
     scrollbar-width: none;
   }
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+section[id], div[id] {
+  scroll-margin-top: 76px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor-piscando{
+  animation: blink 1.2s infinite;
+}
+
+.timeline-scroll-subtle::-webkit-scrollbar {
+  width: 8px;
+}
+
+.timeline-scroll-subtle::-webkit-scrollbar-thumb {
+  background-color: rgba(140, 140, 140, 0.5); 
+  border-radius: 4px; 
+  border: 2px solid transparent; 
+  background-clip: padding-box; 
+}
+
+.timeline-scroll-subtle::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); 
+}
+
+.timeline-scroll-subtle {
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(140, 140, 140, 0.5) rgba(0, 0, 0, 0.1);
+}

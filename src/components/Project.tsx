@@ -27,8 +27,8 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
                     className="w-full h-full object-cover"
                 />
                 
-                <div className="absolute left-4 bottom-2 flex gap-2 z-10">
-                    {technologies.slice(0, 3).map((tech) => {
+                <div className="absolute left-4 right-4 bottom-2 flex gap-2 z-10 overflow-x-auto no-scrollbar">
+                    {technologies.map((tech) => {
                         const IconComponent = iconMap[tech.icon] || FaQuestionCircle;
                         return (
                             <div key={tech.id} className="p-2 bg-surface/70 rounded-full backdrop-blur-sm">
@@ -47,7 +47,7 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
             <div className="flex justify-between items-center px-6 py-4 bg-surface">
                 <div className="flex flex-col">
                     <h3 className="text-white font-medium text-lg">{title}</h3>
-                    <p className="text-[#7C7C7C] text-md">{description}</p>
+                    <p className="text-[#7C7C7C] text-sm line-clamp-2">{description}</p>
                 </div>
                 
                 <Link 
