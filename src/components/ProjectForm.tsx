@@ -1,4 +1,4 @@
-import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
@@ -293,7 +293,7 @@ export function ProjectForm() {
           {images.map((img, i) => (
             <li key={i} className="flex justify-between items-center text-sm text-gray-700 bg-white p-2 rounded border border-gray-200 truncate">
               {img}
-              <button type="button" onClick={() => removeImage(i)} className="text-red-500 hover:text-red-700 ml-4 font-bold flex-shrink-0">
+              <button type="button" onClick={() => removeImage(i)} className="text-red-500 hover:text-red-700 ml-4 font-bold shrink-0">
                 X
               </button>
             </li>
