@@ -28,9 +28,11 @@ export function Hero() {
                         </a>
                     </div>
                     <a 
-                        href="../public/meu-cv.pdf" 
-                        download="meu-cv.pdf"
+                        href="/Luis_Arantes_CV.pdf" 
+                        download="Luis_Arantes_CV.pdf"
                         className="text-white bg-primary px-4 py-4 mt-6 rounded-md shadow-xl inline-block"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         Download CV
                     </a>
