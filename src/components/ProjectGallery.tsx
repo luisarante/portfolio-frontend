@@ -121,9 +121,6 @@ export function ProjectGallery() {
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
             >
-                {/* Mudança Principal aqui: 
-                   Adicionamos 'items-stretch' para garantir que todos tenham a mesma altura na linha 
-                */}
                 <div 
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ 
@@ -133,14 +130,8 @@ export function ProjectGallery() {
                     {projects.map((project) => (
                         <div 
                             key={project.id} 
-                            // CORREÇÃO CRÍTICA:
-                            // 1. flex-shrink-0: Impede que o card encolha ou fique menor que o outro.
-                            // 2. w-full (mobile) ou w-1/2 (PC): Garante a largura correta.
                             className={`flex-shrink-0 lg:px-3  ${itemsPerPage === 2 ? 'w-1/2' : 'w-full'}`}
                         >
-                            {/* Wrapper do Card:
-                                h-full: Força o card a ocupar toda a altura disponível da linha (iguala as alturas).
-                            */}
                             <div className="h-full w-full">
                                 <Project 
                                     key={project.id}
@@ -159,7 +150,6 @@ export function ProjectGallery() {
                 </div>
             </div>
 
-            {/* Setas (Apenas Desktop) */}
             <button 
                 onClick={prevSlide}
                 className="hidden lg:block absolute top-1/2 -left-12 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg z-10 transition-colors"
@@ -178,7 +168,6 @@ export function ProjectGallery() {
                 </svg>
             </button>
 
-            {/* Dots */}
             <div className="flex justify-center mt-6 gap-2">
                 {Array.from({ length: Math.ceil(totalSlides - (itemsPerPage - 1)) }).map((_, idx) => (
                     <button

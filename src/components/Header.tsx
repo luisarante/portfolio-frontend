@@ -49,8 +49,6 @@ export function Header() {
               bg-primary text-white rounded-full flex items-center justify-center
               overflow-hidden relative transition-all duration-700 ease-in-out
               ${
-                // CORREÇÃO 1: Se estiver rolando OU o menu estiver aberto, encolhe para bolinha (60px)
-                // Assim o nome "Luis Arantes" não ocupa espaço em cima do menu
                 isScrolled || isMenuOpen ? "w-[60px] h-[60px]" : "w-[180px] h-[60px]"
               }
             `}
@@ -68,7 +66,6 @@ export function Header() {
               className={`
                 absolute text-2xl font-medium transition-all duration-300
                 ${
-                  // CORREÇÃO 2: Só mostra o nome se o scroll estiver no topo E o menu estiver FECHADO (!isMenuOpen)
                   showFullName && !isMenuOpen
                     ? "opacity-100 scale-100"
                     : "opacity-0 scale-90 -translate-x-[50px]"
