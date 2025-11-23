@@ -1,9 +1,7 @@
-// Em 'src/pages/ProjectGallery.tsx' (exemplo)
 import { useEffect, useState, type TouchEvent} from 'react';
 import axios from 'axios';
-import { Project } from '../components/Project'; // Importe seu card
+import { Project } from '../components/Project'; 
 
-// A interface DEVE BATER com a API (Project + Technologies)
 interface ApiTechnology {
     id: number;
     name: string;
@@ -130,7 +128,7 @@ export function ProjectGallery() {
                     {projects.map((project) => (
                         <div 
                             key={project.id} 
-                            className={`flex-shrink-0 lg:px-3  ${itemsPerPage === 2 ? 'w-1/2' : 'w-full'}`}
+                            className={`shrink-0 lg:px-3  ${itemsPerPage === 2 ? 'w-1/2' : 'w-full'}`}
                         >
                             <div className="h-full w-full">
                                 <Project 

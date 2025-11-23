@@ -41,7 +41,7 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
                     })}
                 </div>
                 
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-surface to-transparent h-1/4 w-full z-0"></div>
+                <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-surface to-transparent h-1/4 w-full z-0"></div>
             </div>
             
             <div className="flex justify-between items-center px-6 py-4 bg-surface">

@@ -103,7 +103,7 @@ export function ContactMessages() {
                 {!msg.lida && (
                   <button
                     onClick={() => markAsRead(msg.id)}
-                    className="ml-4 px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded hover:bg-green-600 transition-colors flex-shrink-0 cursor-pointer"
+                    className="ml-4 px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded hover:bg-green-600 transition-colors shrink-0 cursor-pointer"
                   >
                     Marcar como Lida
                   </button>
