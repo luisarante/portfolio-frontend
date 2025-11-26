@@ -108,19 +108,19 @@ export function Header() {
           </button>
 
           <nav className={`hidden md:flex space-x-8 ${isScrolled ? 'text-white' : 'text-primary'}`}>
-            <a href="#hero" className="hover:text-secondary transition-colors">
+            <a href="#hero" className="hover:text-secondary duration-300 transition-colors hover:bg-primary hover:text-white py-2 px-4 rounded-full">
               Home
             </a>
-            <a href="#sobre" className="hover:text-secondary transition-colors">
+            <a href="#sobre" className="hover:text-secondary duration-300 transition-colors hover:bg-primary hover:text-white py-2 px-4 rounded-full">
               Sobre mim
             </a>
-            <a href="#habilidades" className="hover:text-secondary transition-colors">
+            <a href="#habilidades" className="hover:text-secondary duration-300 transition-colors hover:bg-primary hover:text-white py-2 px-4 rounded-full">
               Habilidades
             </a>
-            <a href="#projetos" className="hover:text-secondary transition-colors">
+            <a href="#projetos" className="hover:text-secondary duration-300 transition-colors hover:bg-primary hover:text-white py-2 px-4 rounded-full">
               Projetos
             </a>
-            <a href="#contato" className="hover:text-secondary transition-colors">
+            <a href="#contato" className="hover:text-secondary duration-300 transition-colors hover:bg-primary hover:text-white py-2 px-4 rounded-full">
               Contato
             </a>
             

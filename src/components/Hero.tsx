@@ -14,7 +14,7 @@ export function Hero() {
                            href="https://www.linkedin.com/in/luis-fernando-arantes" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-white bg-linkedin px-6 py-2 rounded-md flex items-center gap-2"
+                            className="text-white bg-linkedin px-6 py-2 rounded-md flex items-center gap-2 hover:shadow-2xl transition duration-400"
                         >
                             <SiLinkedin />Linkedin
                         </a>
@@ -22,7 +22,7 @@ export function Hero() {
                             href="https://github.com/luisarante" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-white bg-github px-6 py-2 rounded-md flex items-center gap-2"
+                            className="text-white bg-github px-6 py-2 rounded-md flex items-center gap-2 hover:shadow-2xl transition duration-400"
                         >
                             <SiGithub />Github
                         </a>

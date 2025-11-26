@@ -35,6 +35,7 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
                                 <IconComponent 
                                     size={20} 
                                     style={{ color: tech.color }} 
+                                    title={tech.name}
                                 />
                             </div>
                         );
@@ -44,18 +45,17 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
                 <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-surface to-transparent h-1/4 w-full z-0"></div>
             </div>
             
-            <div className="flex justify-between items-center px-6 py-4 bg-surface">
+            <Link to={`/projetos/${id}`} className="flex justify-between items-center px-6 py-4 bg-surface">
                 <div className="flex flex-col">
                     <h3 className="text-white font-medium text-lg">{title}</h3>
                     <p className="text-[#7C7C7C] text-sm line-clamp-2">{description}</p>
                 </div>
                 
-                <Link 
-                    to={`/projetos/${id}`}
-                >
+                <div>
                     <FaArrowRight size={20} style={{ color: "#7C7C7C" }}/>
-                </Link>
-            </div>
+                </div>
+                
+            </Link>
         </div>
     )
 }

@@ -174,7 +174,7 @@ export function ProjectDetail() {
                 <Link to="/#projetos" className="p-4 rounded-full text-[#7C7C7C] bg-primary hover:text-white transition-colors">
                     <FaArrowLeft size={25} />
                 </Link>
-                <h1 className="text-4xl md:text-5xl font-semibold text-primary">{project.title}</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary">{project.title}</h1>
             </header>
             
             <p className="text-md text-content mt-2 mb-4 pb-4 border-b border-gray-300">{project.description}</p>
@@ -248,7 +248,9 @@ export function ProjectDetail() {
                                     <li key={technology.id} className="flex flex-col items-center gap-2 w-16">
                                         <IconComponent 
                                             size={32}
-                                            style={{ color: technology.color }}
+                                            style={{ 
+                                                color: technology.color === "#FFFFFF" ? "#000000" : technology.color 
+                                            }}
                                         />
                                         <span className="text-xs text-center text-content">{technology.name}</span>
                                     </li>
