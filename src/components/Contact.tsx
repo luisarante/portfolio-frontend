@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
                                 {status === 'loading' ? 'Enviando...' : 'Enviar'}
                             </button>
                             <p>Ou</p>
-                            <a href="https://wa.me/5512981526683" target="_blank" rel="noopener noreferrer" className="p-3 bg-[#25d366] rounded-full">
+                            <a href="https://wa.me/5512981526683" aria-label="Contato por Whatsapp" target="_blank" rel="noopener noreferrer" className="p-3 bg-[#25d366] rounded-full">
                                 <span><FaWhatsapp color="white" size={35} /></span>
                             </a>
                         </div>

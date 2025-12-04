@@ -171,7 +171,7 @@ export function ProjectDetail() {
     return (
         <main className="text-white p-4 md:p-8 max-w-6xl mx-auto">
             <header className="flex gap-4 items-center mt-4">
-                <Link to="/#projetos" className="p-4 rounded-full text-[#7C7C7C] bg-primary hover:text-white transition-colors">
+                <Link to="/" aria-label="Voltar para o início" className="p-4 rounded-full text-[#7C7C7C] bg-primary hover:text-white transition-colors">
                     <FaArrowLeft size={25} />
                 </Link>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary">{project.title}</h1>
