@@ -14,16 +14,16 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ ano, titulo, local, descric
       </span>
       
       <div className="p-4 ml-8 bg-gray-800 rounded-lg border border-gray-700 shadow-lg">
-        <time className="block text-sm font-normal leading-none text-gray-500 mb-2">
+        <time className="block text-sm font-normal leading-none text-gray-400 mb-2">
           {ano}
         </time>
         <h3 className="text-xl font-semibold text-white mb-2">
           {titulo}
         </h3>
-        <p className="mb-3 text-sm font-normal text-gray-500">
+        <p className="mb-3 text-sm font-normal text-gray-400">
           {local}
         </p>
-        <p className="text-base text-[#939393]">
+        <p className="text-base text-white/80">
           {descricao}
         </p>
       </div>

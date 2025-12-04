@@ -11,7 +11,7 @@ export function Hero() {
                     <p className="text-primary text-lg mt-6">Focado em transformar ideias em código limpo e funcional.</p>
                     <div className="mt-8 flex gap-4">
                         <a 
-                           href="https://www.linkedin.com/in/luis-fernando-arantes" 
+                            href="https://www.linkedin.com/in/luis-fernando-arantes" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-white bg-linkedin px-6 py-2 rounded-md flex items-center gap-2 hover:shadow-2xl transition duration-400"

@@ -77,7 +77,7 @@ export function Header() {
           </div>
 
           <button
-            className={`md:hidden transition-colors ${isScrolled || isMenuOpen ? 'text-white' : 'text-primary'}`}
+            className={`lg:hidden transition-colors ${isScrolled || isMenuOpen ? 'text-white' : 'text-primary'}`}
             onClick={toggleMenu}
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
@@ -107,7 +107,7 @@ export function Header() {
             </svg>
           </button>
 
-          <nav className={`hidden md:flex space-x-8 ${isScrolled ? 'text-white' : 'text-primary'}`}>
+          <nav className={`hidden lg:flex space-x-8 ${isScrolled ? 'text-white' : 'text-primary'}`}>
             <a href="#hero" className="hover:text-secondary duration-300 transition-colors hover:bg-primary hover:text-white py-2 px-4 rounded-full">
               Home
             </a>
@@ -133,7 +133,7 @@ export function Header() {
         className={`fixed top-0 left-0 w-full min-h-screen bg-surface
           flex flex-col items-center justify-center space-y-6
           transition-all duration-300 ease-in-out z-40
-          md:hidden
+          lg:hidden
           ${
             isMenuOpen
               ? "opacity-100 translate-x-0"

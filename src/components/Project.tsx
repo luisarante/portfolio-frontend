@@ -52,9 +52,8 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
                 </div>
                 
                 <div>
-                    <FaArrowRight size={20} style={{ color: "#7C7C7C" }}/>
-                </div>
-                
+                    <FaArrowRight aria-label="Ver mais detalhes do projeto" size={20} style={{ color: "#7C7C7C" }}/>
+                </div>  
             </Link>
         </div>
     )
