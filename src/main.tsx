@@ -8,6 +8,8 @@ import { Home } from './pages/Home';
 import { ProjectDetail } from './pages/ProjectDetail';
 import { Dashboard } from './pages/Dashboard';
 import { LoginPage } from './pages/LoginPage';
+import { NotFound } from './pages/NotFound';
+
 import { ProtectedRoute } from './components/ProtectedRoute.tsx'; 
 import { AuthProvider } from './context/AuthContext'; 
 
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
         <App />
       </AuthProvider>
     ),
+    errorElement: <NotFound />, 
     children: [
       { path: '/', element: <Home /> },
       { path: '/projetos/:id', element: <ProjectDetail /> },
@@ -30,6 +33,11 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: '*',
+    element: <NotFound />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
