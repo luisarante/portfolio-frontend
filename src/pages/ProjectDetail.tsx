@@ -199,6 +199,7 @@ export function ProjectDetail() {
                     </div>
                 ) : project.images.length > 0 && (
                     <img 
+                    crossOrigin="anonymous"
                     src={project.images[0].url} 
                     alt={project.images[0].altText || project.title}
                     className="w-full h-auto object-cover rounded-lg shadow-lg"
@@ -268,6 +269,7 @@ export function ProjectDetail() {
                         
                         {project.images.slice(embedUrl ? 0 : 1).map(image => (
                             <img 
+                                crossOrigin="anonymous"
                                 key={image.id}
                                 src={image.url}
                                 alt={image.altText || project.title}
@@ -285,6 +287,7 @@ export function ProjectDetail() {
                     onClick={() => setSelectedImage(null)} 
                 >
                     <img
+                        crossOrigin="anonymous"
                         src={selectedImage.url}
                         alt={selectedImage.altText || project.title}
                         className="max-w-[90vw] max-h-[90vh] object-contain"

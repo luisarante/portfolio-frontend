@@ -22,6 +22,7 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
         <div className="rounded-lg overflow-hidden shadow-lg">
             <div className="relative h-48 w-full">
                 <img 
+                    crossOrigin="anonymous"
                     src={coverImage} 
                     alt={title} 
                     className="w-full h-full object-cover"
@@ -48,11 +49,11 @@ export function Project({ title, description, coverImage, id, technologies }: Pr
             <Link to={`/projetos/${id}`} className="flex justify-between items-center px-6 py-4 bg-surface">
                 <div className="flex flex-col">
                     <h3 className="text-white font-medium text-lg">{title}</h3>
-                    <p className="text-[#7C7C7C] text-sm line-clamp-2">{description}</p>
+                    <p className="text-gray-400 text-sm line-clamp-2">{description}</p>
                 </div>
                 
                 <div>
-                    <FaArrowRight aria-label="Ver mais detalhes do projeto" size={20} style={{ color: "#7C7C7C" }}/>
+                    <FaArrowRight aria-label="Ver mais detalhes do projeto" size={20} style={{ color: "#99a1af" }}/>
                 </div>  
             </Link>
         </div>
